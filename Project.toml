@@ -2,3 +2,8 @@ name = "VlasovPIF"
 uuid = "63825f3f-075f-4cc8-a3f0-a762203732d5"
 authors = ["Jakob Ameres <Jakob.Ameres@ipp.mpg.de>"]
 version = "0.1.0"
+
+[deps]
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+Sobol = "ed01d8cd-4d21-5b2a-85b4-cc3bdc58bad4"
+SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"

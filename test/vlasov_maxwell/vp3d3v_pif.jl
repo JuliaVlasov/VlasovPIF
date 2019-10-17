@@ -1,11 +1,6 @@
 # 6D Vlasov - Poisson Single Species
 
-
-include("pif_tools.jl")
-importall pif
-
 using Sobol
-
 
 DTYPE=Float64
 

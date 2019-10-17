@@ -1,11 +1,8 @@
 # 6D Vlasov - Poisson Single Species
 
 
-# importall "./pif3d.jl
 using Sobol
 using ProgressMeter
-
-
 
 Np=Int(1e4) #Number of particles
 Ns=1 #Number of species

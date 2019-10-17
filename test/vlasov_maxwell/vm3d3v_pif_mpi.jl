@@ -1,12 +1,7 @@
 # 6D Vlasov - Poisson Single Species
 # For mpi use
 using MPI
-
-include("pif_tools.jl")
-include("particle_sampling.jl")
-importall pif
-
-using psmp
+using VlasovPIF
 using ProgressMeter
 
 
