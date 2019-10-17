@@ -1,0 +1,25 @@
+language: julia
+
+os: 
+  - osx
+  - linux
+
+julia: 
+  - stable
+
+notifications:
+  email: true
+
+after_success:
+  - julia -e 'using Pkg; cd(Pkg.dir("VlasovPIF")); Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())';
+
+jobs:
+  include:
+    - stage: "Documentation"
+      julia: 1.2
+      os: osx
+      script:
+        - julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
+        - julia --project=docs/ docs/make.jl
+      name: "HTML"
+      after_success: skip
